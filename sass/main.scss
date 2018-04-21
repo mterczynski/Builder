@@ -1,0 +1,96 @@
+/*--------- Imports: ------------------*/
+@import "loadingScreen.scss";
+@import "messageBox.scss";
+@import "mixins.scss";
+@import "sidemenu.scss";
+@import "hamburger.scss";
+@import "adminPanel.scss";
+/*--------- Animations: ---------------*/
+@keyframes animate-stripes 
+{
+    from { background-position: 0 0; }
+    to   { background-position: -300px 0 }
+}
+/*--------- Styles: --------------------*/
+*
+{
+    margin:0;
+    padding:0;
+}
+html
+{
+    font-size:16px;
+}
+body
+{
+    background-color:#222222;
+	overflow:hidden;
+    font-family: Calibri;
+}
+.buttonLogin
+{
+    top:60%;
+}
+.buttonRegister
+{
+    top:70%;
+}
+.inputLogin
+{
+    position: absolute;
+    left:50%;
+    top:40%;
+    transform: translateX(-50%);
+}
+.labelLogin
+{
+    position: absolute;
+    top:40%;
+    left:30%;
+}
+.inputPassword
+{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translateX(-50%);
+}
+.labelPassword
+{
+    position: absolute;
+    top:50%;
+    left:30%;
+}
+
+.loginScreen
+{
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    background-color:rgba(0, 0, 0, 0.6);
+    color:white;
+    font-size:5vmin;
+    input[type="text"]
+    {
+        height:9vmin;
+        width:15.6vmin;
+        text-align: center;
+    }
+    input[type="password"]
+    {
+        height:9vmin;
+        width:15.6vmin;
+        text-align: center;
+    }
+    button
+    {
+        position: absolute;
+        left:50%;
+        transform: translatex(-50%);
+        height:9vmin;
+        width:16vmin;
+    }
+}

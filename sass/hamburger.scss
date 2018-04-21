@@ -1,0 +1,73 @@
+/* Icon 1 from https://codepen.io/designcouch/pen/Atyop */
+
+$hamburgerHeight: 2vmin;
+
+.hamburger {
+	
+	display: inline-block;
+	width: $hamburgerHeight * 4/3;
+	height: $hamburgerHeight;
+	position: absolute;
+	padding-right:1rem;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	cursor: pointer;
+}
+
+.hamburger span{
+	display: block;
+	position: absolute;
+	height: $hamburgerHeight/5;
+	width: 100%;
+	background: #d3531a;
+	border-radius: $hamburgerHeight/5;
+	opacity: 1;
+	left: 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .25s ease-in-out;
+	-moz-transition: .25s ease-in-out;
+	-o-transition: .25s ease-in-out;
+	transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  	top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+  	top: $hamburgerHeight*2/5;
+}
+
+.hamburger span:nth-child(3) {
+  	top: $hamburgerHeight*4/5;
+}
+
+.hamburger.open span:nth-child(1) {
+	top: $hamburgerHeight*2/5;
+	-webkit-transform: rotate(135deg);
+	-moz-transform: rotate(135deg);
+	-o-transform: rotate(135deg);
+	transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+	opacity: 0;
+	left: -$hamburgerHeight*4/3;
+}
+
+.hamburger.open span:nth-child(3) {
+	top: $hamburgerHeight*2/5;
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	transform: rotate(-135deg);
+}

@@ -1,0 +1,79 @@
+//--------- Colors: ----------------
+$menuBackgroundColor : rgb(39,60,81);
+$subMenuBackgroundColor : rgb(23,35,47);
+$subsubMenuBackgroundColor : rgb(13,17,25);
+$activeMenuBackgroundColor:rgb(67,124,151);
+
+$activeMenuFontColor : rgb(255,255,255);
+$activeBuildingColor: #b4f2bd; //hsl(209, 30%, 63%);
+$inactiveMenuFontColor : rgb(130,130,130);
+$save--inactiveColor: rgb(100,100,100);
+$save--activeColor: rgb(130,130,130);
+
+.adminPanel
+{
+    overflow:auto;
+    @include noselect(none);
+    position: absolute;
+    text-align: left;
+    right:0;
+    top:0;
+    width: 20%;
+    height:100%;
+    min-width:230px;
+    //text-indent: 5%;
+    background-color: $menuBackgroundColor;
+    *{
+        color:$inactiveMenuFontColor;
+    }
+    >div{ // menu item
+        text-indent:5%;
+        color:$inactiveMenuFontColor;
+        font-size:2rem;
+        padding-top:2%;
+        padding-bottom:2%;
+        border-bottom:3px solid $lineColor;
+        cursor:pointer;
+        position: relative;
+        :last-child{ // last submenu item
+            margin-bottom: -2%;
+            border-bottom: none;
+        } 
+        >div{ // submenu item - user nickanme
+            padding-left:5%;
+            font-size:1.3rem;
+            padding-top:0.7rem;
+            padding-bottom:0.7rem;
+            padding-right:1rem;
+            border-bottom:1.5px solid $lineColor;
+            background-color: $subMenuBackgroundColor;
+            display: none;
+            position: relative;
+            >div{ // subsubmenu item - building
+                padding-left:5%;
+                font-size:1.3rem;
+                padding-top:0.7rem;
+                padding-bottom:0.7rem;
+                padding-right:1rem;
+                border-bottom:1.5px solid $lineColor;
+                background-color: $subsubMenuBackgroundColor;
+                display: none;
+                position: relative;
+            }
+            &.activeUserName{
+                color:$activeMenuFontColor;
+                >div
+                {
+                    display: block;
+                }
+            }
+        }
+    }
+    >.sidemenu-active{
+        color:$activeMenuFontColor;
+        background-color:$activeMenuBackgroundColor;
+        >div{ // submenu item
+            display: block;
+        }
+    }
+}
