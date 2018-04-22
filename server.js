@@ -20,7 +20,7 @@ const Models = require("./database/Models.js")(mongoose);
 const operations = new require("./database/Operations.js")();
 const express = require('express');  
 
-const ip = "127.0.0.1";
+const ip = "0.0.0.0";
 const port = 3000;
 
 const app = express();  
@@ -125,7 +125,7 @@ io.on("connection", function (client)
 });
 
 mongoose.Promise = global.Promise;
-mongoose.connect(`mongodb://${ip}/builder`); 
+mongoose.connect(`mongodb://127.0.0.1/builder`); 
 connectToMongo();
 
 console.log(`Server starting on ${ip}:${port}`.green);

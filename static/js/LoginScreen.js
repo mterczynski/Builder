@@ -17,7 +17,12 @@ function LoginScreen()
     this.getNode = function(){
         let div = document.createElement("div");
         div.classList += "loginScreen";
-        div.innerHTML = `<label class="labelLogin">Login:</label><input class="inputLogin" type="text"><label class="labelPassword">Hasło:</label><input class="inputPassword" type="password"><button class="buttonLogin">Logowanie</button><button class="buttonRegister">Rejestracja</button>`;
+        div.innerHTML = `<label class="labelLogin">User name:</label>
+            <input class="inputLogin" type="text">
+            <label class="labelPassword">Password:</label>
+            <input class="inputPassword" type="password">
+            <button class="buttonLogin">Log in</button>
+            <button class="buttonRegister">Register</button>`;
         return div;
     }
 }

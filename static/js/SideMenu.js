@@ -6,17 +6,29 @@ function Sidemenu()
         const saveMenuItem = document.createElement("div");
         const newBuildingMenuItem = document.createElement("div");
         const logOutMenuItem = document.createElement("div");
+        const infoTab = document.createElement("div");
     //-------- Append elements: -------------------------
     mainNode.classList.add("sidemenu");
         buildingMenuItem.innerHTML = "Your buildings";
         buildingMenuItem.classList.add("sidemenu-active");
+        buildingMenuItem.classList.add("menu-item");
         mainNode.appendChild(buildingMenuItem);
         saveMenuItem.innerHTML = `<input type="text" value="Building Name" class="buildingName"><img src="images/saveIcon.png" alt="Save" class="saveIcon">`;
         mainNode.appendChild(saveMenuItem);
+        saveMenuItem.classList.add("menu-item");
         newBuildingMenuItem.innerHTML = "New building";
         mainNode.appendChild(newBuildingMenuItem);
+        newBuildingMenuItem.classList.add("menu-item");
         logOutMenuItem.innerHTML = "Log out";
+        logOutMenuItem.classList.add("menu-item");
         mainNode.appendChild(logOutMenuItem);
+        infoTab.classList.add('infoTab');
+        mainNode.appendChild(infoTab);
+        infoTab.innerHTML = `<div class='controlsTitle'>Controls:</div>
+        <div>Change color: 1,2,3,4</div>
+        <div>Control camera: W,A,S,D</div>
+        <div>Change brick size: +,-</div>
+        <div>Rotate brick: Q,E</div>`;
     (function addClickListeners(){
         newBuildingMenuItem.addEventListener("click", (event)=>{
             game.elementGetter.getBricks().map((brick)=>{

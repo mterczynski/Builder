@@ -13,19 +13,16 @@ $lineColor : rgb(62,84,107);
 
 .sidemenu{
     @include noselect(none);
+    color: $inactiveMenuFontColor;
     position: absolute;
     text-align: left;
     left:0;
     top:0;
     width: 20%;
-    height:100%;
-    min-width:230px;
-    //text-indent: 5%;
+    height: 100%;
+    min-width: 230px;
     background-color: $menuBackgroundColor;
-    *{
-        color:$inactiveMenuFontColor;
-    }
-    >div{ // menu item
+    >.menu-item{ 
         text-indent:5%;
         color:$inactiveMenuFontColor;
         font-size:2rem;
@@ -105,10 +102,21 @@ $lineColor : rgb(62,84,107);
         }
     }
     >.sidemenu-active{
-        color:$activeMenuFontColor;
-        background-color:$activeMenuBackgroundColor;
+        color: $activeMenuFontColor;
+        background-color: $activeMenuBackgroundColor;
         >div{ // submenu item
             display: block;
+        }
+    }
+    >.infoTab{
+        // color: white !important;
+        font-size: 24px;
+        width: 300px;
+        padding: 20px;
+        position: absolute;
+        bottom:0;
+        >.controlsTitle{
+            // color:white;
         }
     }
 }

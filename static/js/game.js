@@ -1,19 +1,19 @@
 const game = 
 {
     UNIT:35,
-    playerLogin:null,
-    playerBuildings:[],
-    sidemenu:null,
+    playerLogin: null,
+    playerBuildings: [],
+    sidemenu: null,
     celShader: null,
-    elementGetter:null,
-    pressedKeys : {},
-    lastClicked:null, // for raycasting
-    lastPlacedBrick:null,
-    client:null, // socket.io client
-    scene:new THREE.Scene(),
+    elementGetter: null,
+    pressedKeys: {},
+    lastClicked: null, // for raycasting
+    lastPlacedBrick: null,
+    client: null, // socket.io client
+    scene: new THREE.Scene(),
     renderer: null,
-    raycaster:new THREE.Raycaster(),
-    // camera:new THREE.OrthographicCamera
+    raycaster: new THREE.Raycaster(),
+    // camera: new THREE.OrthographicCamera
     // (
     //     window.innerWidth / -2, // left
     //     window.innerWidth / 2, // right
@@ -89,7 +89,7 @@ const game =
         game.camera.userData.verticalSpeed = 10;
         //--------- Create axis helper: --------------------------
         const axisHelper = new THREE.AxisHelper(game.UNIT * 10, game.UNIT * 10, game.UNIT * 10);
-        game.scene.add(axisHelper);
+        // game.scene.add(axisHelper);
         //--------- Start rendering: ----------------------------
         game.render();
     },
