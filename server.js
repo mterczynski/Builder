@@ -130,57 +130,6 @@ connectToMongo();
 
 console.log(`Server starting on ${ip}:${port}`.green);
 
-operations.registerUser(Models.User,"admin","admin").then((data)=>{
-}).catch((error)=>{
+operations.registerUser(Models.User,"admin","admin").catch((error)=>{
     console.log(error.message.red);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// old server
-
-// const server = http.createServer(function (request, response) 
-// {  
-//     //------------ Reading files: -------------------------------------------------------
-//     if (request.method == "GET")
-//     {
-//         if (request.url === "/") 
-//         {
-//             fs.readFile("static/index.html", function (error, data) 
-//             {
-//                 response.writeHead(200, { 'Content-Type': 'text/html' });
-//                 response.write(data);
-//                 response.end();
-//             })
-//         }
-//         else
-//         {
-//             fs.readFile("static" + request.url, function (error, data) 
-//             {
-//                 response.writeHead(200);
-//                 try
-//                 {
-//                     response.write(data);
-//                 }   
-//                 catch(ex)
-//                 {
-//                     console.error("Cannot read file \"" + "static" + request.url + "\"")
-//                 }
-//                 response.end();
-//             })
-//         }
-//     }
-// });
