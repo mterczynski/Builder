@@ -21,7 +21,7 @@ const operations = new require("./database/Operations.js")();
 const express = require('express');  
 
 const ip = "0.0.0.0";
-const port = 3000;
+const port = 5000;
 
 const app = express();  
 const server = require('http').createServer(app);  
